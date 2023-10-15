@@ -1,8 +1,6 @@
 from django.db import models
 
 # bug model
-
-
 class Bug(models.Model):
     """
     A model to represent a bug report in the bug tracking system.
@@ -27,7 +25,7 @@ class Bug(models.Model):
         ('done', 'Done'),
     )
 
-    description = models.TextField()
+    description = models.CharField(max_length=120)
     bug_type = models.CharField(
         max_length=70, choices=BUG_TYPES, default='error')
     report_date = models.DateField(auto_now_add=True)
@@ -35,4 +33,10 @@ class Bug(models.Model):
         max_length=20, choices=STATUS_CHOICES, default='to_do')
 
     def __str__(self):
+        """
+        Creates a human-readable representation of the bug.
+
+        Returns:
+            str: The bug's description.
+        """
         return self.description
