@@ -1,0 +1,25 @@
+<!-- 
+    form to register a new bug
+ -->
+
+{% extends "base.html" %}
+{% block title %}register bug{% endblock %}
+{% block content %}
+<h1>Register a Bug</h1>
+<form action="{%url 'bug:register_bug'%}" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+    <div class="field-wrapper">
+        {{ field.label_tag }}
+        {{ field }}
+        {% if field.errors %}
+            <small class="error">
+                {{ field.errors }}
+            </small>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <button type="submit">Submit Bug</button>
+</form>
+{% endblock %}
