@@ -2,6 +2,9 @@ from django.urls import path
 
 from . import views
 
-urlpatterns=[
-    path("",views.index,name="index")
+app_name = "bug"
+urlpatterns = [
+    path("", views.get_all_bugs, name="get_all_bugs"),
+    path("<int:bug_id>/", views.bug_detail, name="bug_detail"),
+    path("register-bug", views.register_bug, name="register_bug")
 ]

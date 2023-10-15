@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<button class="register"><a href="{%url 'bug:register_bug' %}">register a bug</a></button>
+<h1>All bugs</h1>
+{% if bugs_list %}
+<ul>
+    {% for bug in bugs_list %}
+    <li class="list"><a href="{%url 'bug:bug_detail' bug.id%}">{{ bug.description }} <small>- {{bug.report_date}}</small></a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No bugs registered yet!</p>
+{% endif %}
+{% endblock %}
