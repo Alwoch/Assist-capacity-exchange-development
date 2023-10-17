@@ -1,7 +1,5 @@
 from django.shortcuts import render, get_object_or_404,redirect
 from django.urls import reverse
-from django.http import HttpResponseRedirect
-from django.views.generic import DetailView
 
 # import the model
 from .models import Bug

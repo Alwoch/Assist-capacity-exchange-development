@@ -1,0 +1,17 @@
+[
+    {
+        "description": "Sample bug 1 description",
+        "bug_type": "error",
+        "status": "to_do"
+    },
+    {
+        "description": "Sample bug 2 description",
+        "bug_type": "feature",
+        "status": "in_progress"
+    },
+    {
+        "description": "Sample bug 3 description",
+        "bug_type": "other",
+        "status": "done"
+    }
+]
