@@ -11,6 +11,7 @@ class TestBugForm(SimpleTestCase):
     """
 
     def test_valid_form(self):
+        """Tests a valid form"""
         data = {
             "description": "form does not redirect after submission",
             "bug_type": "error",
