@@ -13,19 +13,23 @@ A bug reporting app created with django. It allows users to create a bug, view a
    ```
    python3 -m venv venv
    ```
-4. Install project dependencies
+4. activate the virtual environment
+   ```
+   source venv/bin/activate
+   ```
+5. Install project dependencies
    ```
    pip install -r requirements.txt
    ```
-5. create a `.env` file in the root of your project and add your secret key
+6. create a `.env` file in the root of your project and add your secret key
    ```
    SECRET_KEY=<your_secret_key>
    ```
-6. start the server
+7. start the server
    ```
    python3 manage.py runserver
    ```
-7. In your browser's address bar, type `localhost:8000/bug/` to navigate to the bug app and `localhost:8000/admin` to access the admin interface
+8. In your browser's address bar, type `localhost:8000/bug/` to navigate to the bug app and `localhost:8000/admin` to access the admin interface
 
 ### Tasks:
 
