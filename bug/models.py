@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 # bug model
 class Bug(models.Model):
@@ -13,16 +14,16 @@ class Bug(models.Model):
     """
     # allowed descriptions of bug types
     BUG_TYPES = (
-        ('error', 'Error'),
-        ('feature', 'New Feature'),
-        ('other', 'Other'),
+        ('error', _('Error')),
+        ('feature', _('New Feature')),
+        ('other', _('Other')),
     )
 
     # allowed bug status choices
     STATUS_CHOICES = (
-        ('to_do', 'To Do'),
-        ('in_progress', 'In Progress'),
-        ('done', 'Done'),
+        ('to_do', _('To Do')),
+        ('in_progress', _('In Progress')),
+        ('done', _('Done')),
     )
 
     description = models.CharField(max_length=120)
